@@ -16,6 +16,6 @@ Summary of the files we have here with links attached
 
 ### Git CLI
 
-How to use git with the command line/bash [link](https://github.com/Virsabi/Documentations/blob/master/GitCLI/Tutorial.md)
+How to use git with the command line/bash [link](https://github.com/Virsabi/Documentations/blob/master/GitCLI)
 
   
