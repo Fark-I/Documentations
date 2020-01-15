@@ -8,6 +8,7 @@
 3. [ Common Errors ](#errors)
 4. [ LFS ](#lfs)
 5. [ Branching Strategies ](#branching)
+6. [Good Practices/Useful Commands](#commands)
 
 
 ## Introduction 
@@ -30,10 +31,10 @@ UNIX or Linux system
 
 1. [Download](https://gitforwindows.org/) Git Bash from the link and click on the .exe that you have downloaded.
 2. Select the following dependencies at least
-[image]()
+![image](https://github.com/Fark-I/Documentations/blob/master/GitCLI/images/Installation1.png)
 3. Use vim editor as git's standard(or if you prefer something else, go for it, I just use vim) and click next
 4. If you want git to be usable from cmd, chose that option, otherwise go for standard. (I only use git from bash - Fark-I)
-[image]()
+![image](https://github.com/Fark-I/Documentations/blob/master/GitCLI/images/Installation2.png)
 5. Use OpenSSL library, click next
 6. Checkout Windows-style option, and click next
 7. Use MinTTY and click next
@@ -68,7 +69,7 @@ in order to "upload" it to git, you are going to have to follow these steps.
 3. Type `` git init `` , which will create a .git folder in the directory. It initializes a local git repository.
 4. In order to have the local git repository connected to the one on GitHub, you will need to type `` git remote add origin *remote url*``
 The remote URL is the link from the GitHub repository you have on github.com. Example see below.
-[image]()
+![image](https://github.com/Fark-I/Documentations/blob/master/GitCLI/images/git_link.png)
 
 5. You can check if the remote url has been added and it is correct by typing ``git remote -v``
 
@@ -103,6 +104,8 @@ git push -u origin master
 ### Cloning a repository
 
 Navigate to the project repository on github and find the link as seen in the image and copy it.
+
+![image](https://github.com/Fark-I/Documentations/blob/master/GitCLI/images/git_link.png)
 
 Once that is done, navigate to a folder on your computer, where you would like to "download" the project, right click and git bash here.
 
@@ -203,3 +206,25 @@ git branch -d branchName     (deletes branch named: branchName... !!! make sure 
 ```
 
 
+<a name="commands"></a>
+## 6. Good Practices/Useful Commands
+
+First of all you need to make sure that the remote is not ahead (no changes in the remote compared to local) use ``git fetch`` to 
+check if there were any changes in the remote.
+
+``git status`` to check if you have any changes in the local 
+``git checkout -b branchname`` create new branch
+
+
+###### Most Used Commands
+
+```
+git status
+git pull
+git add .
+git commit -m "message"
+git push
+git init
+git fetch
+git checkout -b branchname
+```
