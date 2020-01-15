@@ -102,21 +102,104 @@ git push -u origin master
 
 ### Cloning a repository
 
-### Version Control
+Navigate to the project repository on github and find the link as seen in the image and copy it.
 
+Once that is done, navigate to a folder on your computer, where you would like to "download" the project, right click and git bash here.
+
+To clone the repo, type ``git clone *repository URL*``
+
+### Pulling
+
+Pulling essentially means to acquire the changes from the remote repository and merge them into your local.
+(Remote -  the project repository on github.com)
+
+
+!!! It is recommended that every time, before making any changes in the directory that you check if there are any changes on remote !!!
+
+If you don't have any local changes you can simply type ``git pull`` and it will download all the changes on the remote
+
+If you have changes, but you don't want to keep them, type ``git stash`` which will stash your changes, basically acts as a "revert" function
+
+<a name="tracking"></a>
 #### Tracking changes
 
+Open gitbash in the local folder of your repository.
+
+Type ``git status`` to see if you have any changes.
+
+If it shows a lot of red text, don't be scared, that only means that your changes are not tracked.
+
+To track changes type ``git add .`` (. <- means to track all changes in the current folder)
+
+If you type ``git status`` again, you will see that the file names appear as green, that means your changes have been tracked.
+
+As your changes have been added, make sure you add a message, describing your changes by ``git commit -m "YourMessageHere"``
+
+To upload your changes, follow instructions under [ Pushing changes to remote ](#pushing)
+
+
+<a name="pushing"></a>
 #### Pushing changes to remote
+
+Before you are able to push(upload) your changes, make sure you have followed the steps from [Tracking changes](#tracking) !
+
+After you have described your changes by a commit message, you can type ``git push`` to push to the current branch that you are on.
 
 <a name="errors"></a>
 ## 3. Common Errors
 
 ### Merge conflict
 
+Solving a merge conflict can be difficult, if you are not very experienced with git, I recommend you to seek assistance from a member
+of the Development team or Fark-I. 
+If you are experienced, here are some useful commands:
+
+```
+git diff
+git checkout --theirs
+git checkout --ours
+git reset --hard head
+
+git cherry-pick [--edit] [-n] [-m parent-number] [-s] [-x] [--ff]
+		  [-S[<keyid>]] <commit>
+git cherry-pick (--continue | --skip | --abort | --quit)
+```
+
 <a name="lfs"></a>
 ## 4. Git Large File Storage(LFS)
 
+1. Download and Install [Git LFS](https://git-lfs.github.com/)
+
+``git lfs install``
+You will need to run this in your repository directory, once per repository.
+
+Select the file types you'd like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at anytime.
+
+``git lfs track "*.psd"``
+Make sure .gitattributes is tracked
+
+``git add .gitattributes``
+There is no step three. Just commit and push to GitHub as you normally would.
+
+```
+git add file.psd
+git commit -m "Add design file"
+git push origin master
+```
+
 <a name="branching"></a>
 ## 5. Branching Strategies
+
+Branching can be very important when working with multiple people on the same project and avoid conflicts.
+
+[Here](https://nvie.com/posts/a-successful-git-branching-model/) is a good explanation on how it works, and why it is very useful.
+
+- Useful commands
+
+```
+git checkout -b branchName   (create new branch)
+git checkout branchName      (switch to branch named: branchName)
+git branch -d branchName     (deletes branch named: branchName... !!! make sure to merge with another branch if you want to keep changes!!!!
+```
 
 
