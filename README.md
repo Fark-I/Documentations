@@ -16,6 +16,6 @@ Summary of the files we have here with links attached
 
 ### Git CLI
 
-How to use git with the command line/bash [link](https://github.com/Fark-I/Documentations/blob/master/README.md)
+How to use git with the command line/bash [link](https://github.com/Fark-I/Documentations/tree/master/GitCLI)
 
   
