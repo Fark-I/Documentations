@@ -76,17 +76,19 @@ The remote URL is the link from the GitHub repository you have on github.com. Ex
 
 If all is in order continue to step 6, otherwise see the [ Common Errors ](#errors)
 
-6. Now we will need to track the files from the local directory. 
+6. Add a .gitignore file. For instructions, see [Ignoring Files with .gitignore](#ignore)
+
+7. Now we will need to track the files from the local directory. 
   !!! Warning, if you have any files in the remote repository, first you need to type``git pull``, in order to "download" it, this applies
   to readme.md files too. 
 
 To track local files you type ``git add .`` - this will track all local files
 
-7. Next we will need to commit these files by ``git commit -m "your message here"`` (you need the " " after the -m) - this will add 
+8. Next we will need to commit these files by ``git commit -m "your message here"`` (you need the " " after the -m) - this will add 
 a commit message, which will be visible on github.com, it is important for this message to be self-explanatory, brief but containing 
 information necessary to identify what has changed since the last update/message(example: "add trees")
 
-8. When all these steps are done, we need to "upload" to github.com by ``git push -u origin master`` - this commands contents and meaning:
+9. When all these steps are done, we need to "upload" to github.com by ``git push -u origin master`` - this commands contents and meaning:
 - push: "upload"
 - -u: sets the upstream
 - origin: remote
