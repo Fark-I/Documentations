@@ -228,11 +228,11 @@ You can either use one of the existing .gitignore files from previous projects o
 
 If you change the gitignore file after you are tracking files in a local repository, you will need to clear the cache in order to untrack the files/folders that are specified in the gitignore. Follow the commands below to achieve this.
 
-``
+```
 git rm . -r --cached
 git add .
 git commit -m "fixed gitignore"
-``
+```
 
 ###### Most Used Commands
 
