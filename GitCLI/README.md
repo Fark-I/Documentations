@@ -79,10 +79,10 @@ If all is in order continue to step 6, otherwise see the [ Common Errors ](#erro
 6. Add a .gitignore file. For instructions, see [Ignoring Files with .gitignore](#ignore)
 
 7. Now we will need to track the files from the local directory. 
-  !!! Warning, if you have any files in the remote repository, first you need to type``git pull``, in order to "download" it, this applies
-  to readme.md files too. 
+  !!! Warning, if you have any files in the remote repository, first you need to type``git pull``, in order to "download" it, this
+  applies to readme.md files too. 
 
-To track local files you type ``git add .`` - this will track all local files
+  To track local files you type ``git add .`` - this will track all local files
 
 8. Next we will need to commit these files by ``git commit -m "your message here"`` (you need the " " after the -m) - this will add 
 a commit message, which will be visible on github.com, it is important for this message to be self-explanatory, brief but containing 
