@@ -9,6 +9,7 @@
 4. [ LFS ](#lfs)
 5. [ Branching Strategies ](#branching)
 6. [Good Practices/Useful Commands](#commands)
+7. [Ignoring Files with .gitignore](#ignore)
 
 
 ## Introduction 
@@ -215,6 +216,21 @@ check if there were any changes in the remote.
 ``git status`` to check if you have any changes in the local 
 ``git checkout -b branchname`` create new branch
 
+<a name="ignore"></a>
+## 7. Ignoring files with .gitignore
+
+.gitignore is a "text" file which you can edit to specify which folders should git not add/ignore when tracking files on local. You
+should always create a .gitignore file before you call ``git add.``. 
+
+You can either use one of the existing .gitignore files from previous projects or create a new one on [gitignore.io](https://www.gitignore.io)
+
+If you change the gitignore file after you are tracking files in a local repository, you will need to clear the cache in order to untrack the files/folders that are specified in the gitignore. Follow the commands below to achieve this.
+
+``
+git rm . -r --cached
+git add .
+git commit -m "fixed gitignore"
+``
 
 ###### Most Used Commands
 
